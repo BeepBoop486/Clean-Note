@@ -12,7 +12,7 @@
     $stmt1 = $conn->prepare("SELECT name,bio FROM users WHERE name=?");
     $stmt1->bind_param("s", $toshowu);
     $stmt1->execute();
-    $stmt1->bind_result($uname);
+    $stmt1->bind_result($uname, $bio);
     $stmt1->fetch();
     $stmt1->close();
 
@@ -22,3 +22,11 @@
     }
 
 ?>
+
+<div class="row text-center cover-container">
+    <a><img src="/img/pp.jpg"></a>
+    <h1 class="profile-name"><?php echo $uname; ?></h1>
+    <p class="user-text">
+        <?php echo $bio; ?>
+    </p>
+</div>

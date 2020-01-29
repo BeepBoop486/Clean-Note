@@ -25,11 +25,12 @@
 
 			//Some other nedded parameters
 			$defbio = "¡Hi there!. I'm using CleanNote";
+			$regdate = date("d/m/Y");
 
-			$stmt = $conn->prepare("INSERT INTO users(name, pass, bio) VALUES(?,?,?)");
-			$stmt->bind_param("sss", $pname, $finalpass, $defbio);
+			$stmt = $conn->prepare("INSERT INTO users(name, pass, bio, regdate) VALUES(?,?,?,?)");
+			$stmt->bind_param("ssss", $pname, $finalpass, $defbio, $regdate);
 			if($stmt->execute()) {
-				echo "You've successfully created an account";
+				echo '<script>window.location.href = "/"</script>';
 			} else {
 				echo "There's been an error creating an account " . $conn->errno . " " . $conn->error;
 			}
@@ -52,7 +53,7 @@
 		} else {
 			$canlogin = 0;
 		}
-		$stmt1->bind_result($dbid, $dbname, $dbpass, $bio);
+		$stmt1->bind_result($dbid, $dbname, $dbpass, $bio, $regdate);
 		while($stmt1->fetch()) {
 			$dbpass = $dbpass;
 		}
