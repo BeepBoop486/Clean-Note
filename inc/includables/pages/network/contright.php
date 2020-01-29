@@ -32,7 +32,7 @@
 <!-- Posts -->
 <?php
 
-	//TODO: Select posts only from friends (or accounts i follow, i haven't declared that still)
+	//TODO: Select posts only from the accounts i follow
 	$stmt1 = $conn->prepare("SELECT * FROM posts ORDER BY id DESC"); //For now i'll just select all posts
 	if($stmt1->execute()) {
 		$stmt1->bind_result($post_id, $post_content, $post_uploader, $post_date);
