@@ -48,7 +48,7 @@
 						</div>
 						<div class="pull-left meta">
 							<div class="title h5">
-				              			<a href="#" class="post-user-name">'.$post_uploader.'</a>
+				              			<a href="/p/'.$post_uploader.'" class="post-user-name">'.$post_uploader.'</a>
 				              			Posted:
 				          		</div>
 							<h6 class="text-muted time">'.$post_date.'</h6>
