@@ -34,7 +34,7 @@
 				</li>
 				<li>
 					<!-- TODO: logout -->
-					<a href="#">
+					<a href="/usrs/logout.php">
 						Logout
 					</a>
 				</li>
