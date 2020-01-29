@@ -6,6 +6,7 @@
 
 	include "network/control/post.php";
 	include "network/header.php";
+	include "network/selfacc.php";
 	include "network/container.php";
 
 ?>
