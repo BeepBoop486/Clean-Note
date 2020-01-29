@@ -42,7 +42,7 @@ server {
 
 	# Routing
 	rewrite ^/logout /usrs/logout.php last;
-        rewrite ^/(.*)$ /usrs/profile.php?user=$1 last;
+        rewrite ^/p/(.*)$ /usrs/profile.php?user=$1 last;
 
         location / {
                 # First attempt to serve request as file, then
