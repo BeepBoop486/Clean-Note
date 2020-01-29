@@ -21,7 +21,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<!-- TODO: Go to the profile AND PP Preview -->
-					<a href=""><?php echo $_SESSION["name"]; ?></a>
+					<a href="/p/<?php echo $_SESSION['name'];?>"><?php echo $_SESSION["name"]; ?></a>
 				</li>
 				<li>
 					<a href="/">Home</a>
