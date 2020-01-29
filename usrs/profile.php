@@ -30,3 +30,16 @@
         <?php echo $bio; ?>
     </p>
 </div>
+
+<div class="container" style="margin-top: 2px;">
+    <div class="col-md-10 no-padding-xs">
+        <div class="row">
+            <?php
+
+                include "profile/prof_left.php";
+                include "profile/prof_right.php";
+
+            ?>
+        </div>
+    </div>
+</div>
