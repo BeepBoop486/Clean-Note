@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 29, 2020 at 10:23 AM
+-- Generation Time: Jan 29, 2020 at 12:22 PM
 -- Server version: 10.3.18-MariaDB-0+deb10u1
 -- PHP Version: 7.3.11-1~deb10u1
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `clean`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `follows`
+--
+
+CREATE TABLE `follows` (
+  `id` int(11) NOT NULL,
+  `follower` varchar(255) NOT NULL,
+  `fofollow` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -44,12 +56,20 @@ CREATE TABLE `posts` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `pass` varchar(255) NOT NULL
+  `pass` varchar(255) NOT NULL,
+  `bio` varchar(255) NOT NULL,
+  `regdate` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `follows`
+--
+ALTER TABLE `follows`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `posts`
@@ -66,6 +86,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `follows`
+--
+ALTER TABLE `follows`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `posts`
