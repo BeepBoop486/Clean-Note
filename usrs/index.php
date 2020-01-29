@@ -22,8 +22,12 @@
 		}
 
 		if($canregister == 1) {
-			$stmt = $conn->prepare("INSERT INTO users(name, pass) VALUES(?,?)");
-			$stmt->bind_param("ss", $pname, $finalpass);
+
+			//Some other nedded parameters
+			$defbio = "¡Hi there!. I'm using CleanNote";
+
+			$stmt = $conn->prepare("INSERT INTO users(name, pass, bio) VALUES(?,?,?)");
+			$stmt->bind_param("sss", $pname, $finalpass, $defbio);
 			if($stmt->execute()) {
 				echo "You've successfully created an account";
 			} else {
@@ -48,7 +52,7 @@
 		} else {
 			$canlogin = 0;
 		}
-		$stmt1->bind_result($dbid, $dbname, $dbpass);
+		$stmt1->bind_result($dbid, $dbname, $dbpass, $bio);
 		while($stmt1->fetch()) {
 			$dbpass = $dbpass;
 		}
