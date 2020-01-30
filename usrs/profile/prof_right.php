@@ -6,7 +6,7 @@
 
     <?php
 
-        $stmt = $conn->prepare("SELECT * FROM posts WHERE post_uploader=?");
+        $stmt = $conn->prepare("SELECT * FROM posts WHERE post_uploader=? ORDER BY id DESC");
         $stmt->bind_param("s", $uname);
         $stmt->execute();
         $stmt->bind_result($post_id, $post_content, $post_uploader, $post_date);
