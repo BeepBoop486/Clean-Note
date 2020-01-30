@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 29, 2020 at 12:22 PM
+-- Generation Time: Jan 30, 2020 at 01:26 PM
 -- Server version: 10.3.18-MariaDB-0+deb10u1
 -- PHP Version: 7.3.11-1~deb10u1
 
@@ -58,7 +58,14 @@ CREATE TABLE `users` (
   `name` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `bio` varchar(255) NOT NULL,
-  `regdate` varchar(255) NOT NULL
+  `regdate` varchar(255) NOT NULL,
+  `fname` varchar(100) NOT NULL,
+  `lname` varchar(100) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `bday` varchar(20) NOT NULL,
+  `occupation` varchar(255) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `phonen` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

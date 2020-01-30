@@ -31,8 +31,11 @@
 			$defbio = "¡Hi there!. I'm using CleanNote";
 			$regdate = date("d/m/Y");
 
-			$stmt = $conn->prepare("INSERT INTO users(name, pass, bio, regdate) VALUES(?,?,?,?)");
-			$stmt->bind_param("ssss", $pname, $finalpass, $defbio, $regdate);
+			$ss = "";
+			$si = 0;
+
+			$stmt = $conn->prepare("INSERT INTO users(name, pass, bio, regdate, fname, lname, country, bday, occupation, mail, phonen) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
+			$stmt->bind_param("ssssssssssi", $pname, $finalpass, $defbio, $regdate,$ss,$ss,$ss,$ss,$ss,$ss,$si);
 			if($stmt->execute()) {
 				echo '<script>window.location.href = "/"</script>';
 			} else {
@@ -57,7 +60,7 @@
 		} else {
 			$canlogin = 0;
 		}
-		$stmt1->bind_result($dbid, $dbname, $dbpass, $bio, $regdate);
+		$stmt1->bind_result($dbid, $dbname, $dbpass, $bio, $regdate, $fname, $lname, $country, $bday, $occupation, $mail, $phonen);
 		while($stmt1->fetch()) {
 			$dbpass = $dbpass;
 		}
