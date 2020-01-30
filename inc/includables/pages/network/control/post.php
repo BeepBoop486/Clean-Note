@@ -2,7 +2,7 @@
 
 	if(isset($_POST["psubmit"])) {
 
-		$post_content = $_POST["topostpostcontent"];
+		$post_content = str_replace(chr(10), "\n", $_POST["topostpostcontent"]);
 		$post_uploader = $_SESSION["name"];
 		$post_date = date("d/m/Y");
 

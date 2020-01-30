@@ -56,7 +56,7 @@
 					</div>
 
 					<div class="post-description">
-						<p>'.$post_content.'</p>
+						<p>'.nl2br($post_content).'</p>
 						<!-- TODO: Stats -->
 						<div class="stats">
 							<a class="stat-item"><i class="fa fa-thumbs-up icon"></i> 0</a>
