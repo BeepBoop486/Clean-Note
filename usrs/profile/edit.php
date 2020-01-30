@@ -8,7 +8,7 @@
 
     include "../../inc/includables/pages/network/header.php";
     include "../../inc/includables/header.php";
-    
+
     $toshowu = $_SESSION["name"];
 
     $stmt1 = $conn->prepare("SELECT name,bio,regdate,fname,lname,country,bday,occupation,mail,phonen FROM users WHERE name=?");
@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col-md-10 no-paddin-xs">
 
-            <?php include "prof_left.php"; ?>
+            <?php include "prof_left.php"; include "editAccount.php"; ?>
 
         </div>
     </div>
