@@ -9,10 +9,10 @@
     include "../inc/includables/pages/network/header.php";
     include "../inc/includables/header.php";
 
-    $stmt1 = $conn->prepare("SELECT name,bio FROM users WHERE name=?");
+    $stmt1 = $conn->prepare("SELECT name,bio,regdate,fname,lname,country,bday,occupation,mail,phonen FROM users WHERE name=?");
     $stmt1->bind_param("s", $toshowu);
     $stmt1->execute();
-    $stmt1->bind_result($uname, $bio);
+    $stmt1->bind_result($uname, $bio, $regdate, $fname, $lname, $country, $bday, $occupation, $mail, $phonen);
     $stmt1->fetch();
     $stmt1->close();
 
@@ -30,6 +30,7 @@
         <?php
         
             include "profile/prof_left.php";
+            include "profile/prof_right.php";
         
         ?>
     </div>
