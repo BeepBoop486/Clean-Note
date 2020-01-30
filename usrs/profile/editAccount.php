@@ -10,7 +10,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">UserName</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="text" name="uname" value="<?php echo $uname;?>">
+                        <input class="form-control" type="text" name="uname" value="<?php echo $uname;?>" disabled>
                     </div>
                 </div>
 
