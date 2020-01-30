@@ -44,6 +44,7 @@ server {
 	rewrite ^/logout /usrs/logout.php last;
         rewrite ^/p/(.*)$ /usrs/profile.php?user=$1 last;
         rewrite ^/a/(.*)$ /usrs/about.php?user=$1 last;
+        rewrite ^/editAccount /usrs/profile/edit.php last;
 
         location / {
                 # First attempt to serve request as file, then

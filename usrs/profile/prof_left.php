@@ -15,7 +15,7 @@
                 </li>
                 <?php if(isset($_SESSION["name"]) && $_SESSION["name"] == $uname) : ?>
                 <li>
-                    <a href="#"><i class="fa fa-edit"></i> Edit profile</a>
+                    <a href="/editAccount"><i class="fa fa-edit"></i> Edit profile</a>
                 </li>
                 <?php endif; ?>
 
@@ -45,7 +45,7 @@
                 <li><a href="/a/<?php echo $uname; ?>"><i class="fa fa-info-circle"></i> About</a></li>
                 <?php if(isset($_SESSION["name"]) && $_SESSION["name"] == $uname) : ?>
                 <li>
-                    <a href="#"><i class="fa fa-edit"></i> Edit profile</a>
+                    <a href="/editAccount"><i class="fa fa-edit"></i> Edit profile</a>
                 </li>
                 <?php endif; ?>
             </ul>
