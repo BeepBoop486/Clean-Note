@@ -21,6 +21,10 @@
 			$stmt1->close();
 		}
 
+		if(!$pname && !$ppass) {
+			$canregister = 0;
+		}
+
 		if($canregister == 1) {
 
 			//Some other nedded parameters
