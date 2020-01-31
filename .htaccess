@@ -6,5 +6,6 @@
     RewriteRule     ^p/(.*)$ usrs/profile.php?user=$1     [NC,L]
     RewriteRule     ^a/(.*)$ usrs/about.php?user=$1       [NC,L]
     RewriteRule     ^editAccount$ usrs/profile/edit.php   [NC,L]
+    RewriteRule     ^l/(.*)$ usrs/liked.php?user=$1       [NC,L]
 
 </IfModule>

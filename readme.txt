@@ -11,3 +11,5 @@ TODO:
 - Comment in posts
 - Like comments and reply to them
 - Like system don't take user_id as parameter, but from $_SESSION["uid"]
+- Add the stats (post footer) to every page where it's needed
+- To do the "get the following accounts posts" like i did with the liked

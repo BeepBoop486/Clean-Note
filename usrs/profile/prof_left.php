@@ -13,6 +13,9 @@
                 <li>
                     <a href="/a/<?php echo $uname; ?>"><i class="fa fa-info-circle"></i> About</a>
                 </li>
+                <li>
+                    <a href="/l/<?php echo $uname; ?>"><i class="fa fa-heart"></i> Liked</a>
+                </li>
                 <?php if(isset($_SESSION["name"]) && $_SESSION["name"] == $uname) : ?>
                 <li>
                     <a href="/editAccount"><i class="fa fa-edit"></i> Edit profile</a>
@@ -43,6 +46,7 @@
             <ul class="nav nav-pills nav-stacked">
                 <li><a href="/p/<?php echo $uname; ?>"><i class="fa fa-user"></i>Profile</a></li></li>
                 <li><a href="/a/<?php echo $uname; ?>"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="/l/<?php echo $uname; ?>"><i class="fa fa-heart"></i> Liked</a></li>
                 <?php if(isset($_SESSION["name"]) && $_SESSION["name"] == $uname) : ?>
                 <li>
                     <a href="/editAccount"><i class="fa fa-edit"></i> Edit profile</a>

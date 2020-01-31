@@ -23,7 +23,7 @@
                             </div>
                             <div class="pull-left meta">
                                 <div class="title h5">
-                                    <a class="post-user-name">'.$post_uploader.'</a> Ha posteado:
+                                    <a class="post-user-name">'.$post_uploader.'</a> Posted:
                                 </div>
                                 <h6 class="text-muted time">'.$post_date.'</h6>
                             </div>
@@ -69,6 +69,9 @@
                 </div>
                 <div class="bio-row">
                     <p><span>Reg. Date</span> : <?php echo $regdate; ?></p>
+                </div>
+                <div class="bio-row">
+                    <p><span>Email</span> : <?php echo $mail; ?></p>
                 </div>
 
             </div>
