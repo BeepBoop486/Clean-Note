@@ -59,9 +59,9 @@
 						<p>'.nl2br($post_content).'</p>
 						<!-- TODO: Stats -->
 						<div class="stats">
-							<a class="stat-item"><i class="fa fa-thumbs-up icon"></i> 0</a>
-							<a class="stat-item"><i class="fa fa-retweet icon"></i> 0</a>
-							<a class="stat-item"><i class="fa fa-comments icon"></i> 0</a>
+							<a class="stat-item" id="like_button_'.$post_id.'"><i class="fa fa-thumbs-up icon"></i> 0</a>
+							<a class="stat-item" id="retweet_button_'.$post_id.'"><i class="fa fa-retweet icon"></i> 0</a>
+							<a class="stat-item" id="comment_button_'.$post_id.'"><i class="fa fa-comments icon"></i> 0</a>
 						</div>
 					</div>
 
