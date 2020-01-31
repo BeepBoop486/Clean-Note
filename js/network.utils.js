@@ -25,15 +25,23 @@ function CheckIfILiked(post_id, user_id, action) {
         }
     })
 
-    $.get("/api/likes/GetLikes.php", {post_id: post_id}).done((data) => {
-        for(var i = 0; i < data; i++) {
-            AddALike(post_id)
-        }
-    })
+    if(action == 1) {
+        $.get("/api/likes/GetLikes.php", {post_id: post_id}).done((data) => {
+            for(var i = 0; i < data; i++) {
+                AddALike(post_id)
+            }
+        })
+    }
 }
 
 function DeleteLike(post_id, user_id) {
     var post_id = post_id, user_id = user_id;
+
+    $.post("/api/likes/DeleteLike.php", {post_id: post_id, liker_id: user_id}).done((data) => {
+        if(data == 1) {
+            DeleteALike(post_id)
+        }
+    })
 }
 
 function Like(post_id, user_id) {
@@ -52,7 +60,16 @@ function AddALike(post_id) {
     var post_id = post_id
 
     var dom = document.getElementById("likes_value_"+post_id)
-    dom.innerHTML = + 1
+    dom.innerHTML = dom.innerHTML + 1
+}
+
+function DeleteALike(post_id) {
+    var post_id = post_id
+
+    var dom = document.getElementById("likes_value_"+post_id)
+    dom.innerHTML = dom.innerHTML - 1
+    dom.style.color = "#7f7f7f"
+
 }
 
 function CheckIfIReCleaned/*xd*/(post_id, user_id) {
