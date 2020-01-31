@@ -62,7 +62,7 @@
 						<div class="stats">
 							<a class="stat-item" id="like_button_'.$post_id.'" onclick="CheckIfILiked('.$post_id.', '.$_SESSION["uid"].', 0)"><i class="fa fa-thumbs-up icon"></i> <k id="likes_value_'.$post_id.'"> 0</k></a>
 							<a class="stat-item" id="retweet_button_'.$post_id.'"><i class="fa fa-retweet icon"></i></a>
-							<a class="stat-item" id="comment_button_'.$post_id.'"><i class="fa fa-comments icon"></i> </a>
+							<a class="stat-item" id="comment_button_'.$post_id.'" onclick="Comment('.$post_id.')"><i class="fa fa-comments icon"></i> </a>
 						</div>
 					</div>
 

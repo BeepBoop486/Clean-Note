@@ -83,6 +83,15 @@ function ReClean(post_id, user_id) {
 
 }
 
-function Comment(post_id, user_id) {
+function Comment(post_id) {
+    var post_id = post_id
 
+    //TODO: A comment textarea will be shown after clicking this btn
+    var content = prompt("Please enter your reply here:");
+
+    if(content != null) {
+        $.post("/api/comments/Comment.php", {post_id: post_id, comment_cnt: content}).done((data) => {
+            alert(data)
+        })
+    }
 }
