@@ -9,13 +9,20 @@ function CheckIfILiked(post_id, user_id) {
         if(data == 0) {
             Like(post_id, user_id)
         } else {
-            alert("You've already liked this");
+            DeleteLike(post_id, user_id)
         }
     })
 }
 
+function DeleteLike(post_id, user_id) {
+}
+
 function Like(post_id, user_id) {
-    alert(post_id + " " + user_id)
+    var post_id = post_id, user_id = user_id;
+
+    $.post("/api/likes/Like.php", {post_id: post_id, liker_id: user_id}).done((data) => {
+        alert(data)
+    })
 }
 
 function CheckIfIReCleaned/*xd*/(post_id, user_id) {
