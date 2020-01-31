@@ -60,7 +60,8 @@ function AddALike(post_id) {
     var post_id = post_id
 
     var dom = document.getElementById("likes_value_"+post_id)
-    dom.innerHTML = dom.innerHTML + 1
+    var likes = parseInt(dom.innerHTML, 10)
+    dom.innerHTML = likes + 1
 }
 
 function DeleteALike(post_id) {
