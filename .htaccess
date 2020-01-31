@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine on
+
+    RewriteRule     ^logout$ usrs/logout.php              [NC,L]
+    RewriteRule     ^p/(.*)$ usrs/profile.php?user=$1     [NC,L]
+    RewriteRule     ^a/(.*)$ usrs/about.php?user=$1       [NC,L]
+    RewriteRule     ^editAccount$ usrs/profile/edit.php   [NC,L]
+
+</IfModule>
