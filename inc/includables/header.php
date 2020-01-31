@@ -4,8 +4,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<title>CleanNote</title>
+	<title><?php echo $globals["SITE_NAME"]; ?></title>
 	<meta charset="utf-8">
+	<meta name="description" content="<?php echo $globals['SITE_DESC']; ?>">
+	<meta name="keywords" content="<?php echo $globals['SITE_TAGS']; ?>">
+	<meta name="author" content="<?php echo $globals['SITE_AUTH']; ?>">
 
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/animate.min.css">
