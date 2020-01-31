@@ -13,5 +13,5 @@ TODO:
 - Like system don't take user_id as parameter, but from $_SESSION["uid"]
 - Add the stats (post footer) to every page where it's needed
 - To do the "get the following accounts posts" like i did with the liked
-- The posts are opened in a different page, to show all the comments available
+- The posts are opened in a different page, to show all the comments available - Working on this
 - To change all the forms with Ajax Queries
