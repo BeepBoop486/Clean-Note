@@ -24,6 +24,12 @@ function CheckIfILiked(post_id, user_id, action) {
             })
         }
     })
+
+    $.get("/api/likes/GetLikes.php", {post_id: post_id}).done((data) => {
+        for(var i = 0; i < data; i++) {
+            AddALike(post_id)
+        }
+    })
 }
 
 function DeleteLike(post_id, user_id) {
@@ -37,10 +43,16 @@ function Like(post_id, user_id) {
         if(data == 1) {
             var dom = document.getElementById("like_button_"+post_id);
             dom.style.color = "aqua";
-            var dom = document.getElementById("likes_value_"+post_id)
-            dom.innerHTML = dom.innerHTML + 1
+            AddALike(post_id)
         }
     })
+}
+
+function AddALike(post_id) {
+    var post_id = post_id
+
+    var dom = document.getElementById("likes_value_"+post_id)
+    dom.innerHTML = + 1
 }
 
 function CheckIfIReCleaned/*xd*/(post_id, user_id) {
