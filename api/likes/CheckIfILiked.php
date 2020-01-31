@@ -2,9 +2,9 @@
 
     include "../../inc/db.php";
 
-    if(isset($_GET["post_id"]) && isset($_GET["liker_id"])) {
+    if(isset($_GET["post_id"]) && isset($_SESSION["uid"])) {
         $post_id = $_GET["post_id"];
-        $liker_id= $_GET["liker_id"];
+        $liker_id= $_SESSION["uid"];
         $HaveILiked = 0;
 
         $stmt = $conn->prepare("SELECT * FROM likes WHERE post_id=? AND liker_id=?");

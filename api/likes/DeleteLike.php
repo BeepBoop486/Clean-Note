@@ -2,10 +2,10 @@
 
     include "../../inc/db.php";
 
-    if(isset($_POST["post_id"]) && isset($_POST["liker_id"])) {
+    if(isset($_POST["post_id"]) && isset($_SESSION["uid"])) {
         
         $post_id = $_POST["post_id"];
-        $like_id = $_POST["liker_id"];
+        $like_id = $_SESSION["uid"];
 
         $like_exists = 0;
         
