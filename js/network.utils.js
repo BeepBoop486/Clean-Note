@@ -2,19 +2,20 @@
 //Because I'll use Ajax
 
 function CheckIfILiked(post_id, user_id) {
-    var liked = false;
+
+    var post_id = post_id, user_id = user_id;
 
     $.get("/api/likes/CheckIfILiked.php", {post_id: post_id, liker_id: user_id}).done((data) => {
-        alert(data)
+        if(data == 0) {
+            Like(post_id, user_id)
+        } else {
+            alert("You've already liked this");
+        }
     })
-
-    return liked;
 }
 
 function Like(post_id, user_id) {
-    if(!CheckIfILiked(post_id, user_id)) {
-        
-    }
+    alert(post_id + " " + user_id)
 }
 
 function CheckIfIReCleaned/*xd*/(post_id, user_id) {
