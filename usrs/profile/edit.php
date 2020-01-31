@@ -36,8 +36,6 @@
                 echo $conn->errno;
             }
         }
-
-        echo $puname . $pbio . $pfname . $plname.$pcountry.$pbday.$poccupation.$pmail;
     }
 
     $toshowu = $_SESSION["name"];

@@ -6,8 +6,8 @@
         header('Location: /');
     }
 
-    include "../inc/includables/pages/network/header.php";
     include "../inc/includables/header.php";
+    include "../inc/includables/pages/network/header.php";
 
     $stmt1 = $conn->prepare("SELECT name,bio,regdate,fname,lname,country,bday,occupation,mail,phonen FROM users WHERE name=?");
     $stmt1->bind_param("s", $toshowu);
