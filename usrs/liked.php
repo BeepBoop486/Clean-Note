@@ -67,6 +67,8 @@
 
                         echo '
                         
+                            <!-- TODO: Full stats here -->
+
                             <div class="panel panel-white post panel-shadow">
                                 
                                 <div class="post-heading">

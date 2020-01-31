@@ -59,6 +59,7 @@
 
 					<div class="post-description">
 						<p>'.nl2br($post_content).'</p>
+						<a href="/post/'.$post_id.'">Click here for full view</a>
 						<div class="stats">
 							<a class="stat-item" id="like_button_'.$post_id.'" onclick="CheckIfILiked('.$post_id.', '.$_SESSION["uid"].', 0)"><i class="fa fa-thumbs-up icon"></i> <k id="likes_value_'.$post_id.'"> 0</k></a>
 							<a class="stat-item" id="retweet_button_'.$post_id.'"><i class="fa fa-retweet icon"></i></a>

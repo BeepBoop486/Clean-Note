@@ -14,6 +14,8 @@
 
             while($stmt->fetch()) {
                 echo '
+
+                    <!-- TODO: Full stats here -->
                 
                     <div class="panel panel-white post panel-shadow">
 
