@@ -6,10 +6,7 @@ Clean-Note uses the following concepts:
 - There are not friends, there are followers
 
 TODO:
-- Added routing to not use ugly addresses
 - In the home will be shown only the posts from the users we follow
-- Profile page
-- Profile customization
 - Follow and unfollow system
 - Comment and like in posts
 - Like comments and reply to them
