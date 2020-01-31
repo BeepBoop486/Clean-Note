@@ -69,6 +69,7 @@
 		if($canlogin) {
 			if(password_verify($ppass, $dbpass)) {
 				$_SESSION["name"] = $pname;
+				$_SESSION["uid"] = $dbid;
 				echo '<script>window.location.href = "/"</script>';
 			} else {
 				echo "Your password is wrong";
