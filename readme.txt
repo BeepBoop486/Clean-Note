@@ -8,6 +8,6 @@ Clean-Note uses the following concepts:
 TODO:
 - In the home will be shown only the posts from the users we follow
 - Follow and unfollow system
-- Comment and like in posts
+- Comment in posts
 - Like comments and reply to them
-- Like system don't take user_id as parameter, it'll take it from $_SESSION["uid"]
+- Like system don't take user_id as parameter, but from $_SESSION["uid"]
