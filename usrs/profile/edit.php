@@ -6,11 +6,10 @@
         header("Location: /");
     }
 
-    include "../../inc/includables/pages/network/header.php";
     include "../../inc/includables/header.php";
+    include "../../inc/includables/pages/network/header.php";
 
     if(isset($_POST["submit"])) {
-        $puname = $_POST["uname"];
         $pbio = $_POST["bio"];
         $pfname = $_POST["fname"];
         $plname = $_POST["lname"];
@@ -19,7 +18,7 @@
         $poccupation = $_POST["occupation"];
         $pmail = $_POST["mail"];
 
-        if($puname && $pbio) {
+        if($pbio) {
             //If neither the name nor bio are empty
             $stmt = $conn->prepare('UPDATE users SET
                                            bio=?,
