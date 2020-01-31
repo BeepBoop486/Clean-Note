@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2020 at 01:26 PM
+-- Generation Time: Jan 31, 2020 at 11:08 AM
 -- Server version: 10.3.18-MariaDB-0+deb10u1
 -- PHP Version: 7.3.11-1~deb10u1
 
@@ -25,13 +25,13 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `follows`
+-- Table structure for table `likes`
 --
 
-CREATE TABLE `follows` (
+CREATE TABLE `likes` (
   `id` int(11) NOT NULL,
-  `follower` varchar(255) NOT NULL,
-  `fofollow` varchar(255) NOT NULL
+  `post_id` int(255) NOT NULL,
+  `liker_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -73,9 +73,9 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `follows`
+-- Indexes for table `likes`
 --
-ALTER TABLE `follows`
+ALTER TABLE `likes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -95,9 +95,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `follows`
+-- AUTO_INCREMENT for table `likes`
 --
-ALTER TABLE `follows`
+ALTER TABLE `likes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
