@@ -10,3 +10,4 @@ TODO:
 - Follow and unfollow system
 - Comment and like in posts
 - Like comments and reply to them
+- Like system don't take user_id as parameter, it'll take it from $_SESSION["uid"]
