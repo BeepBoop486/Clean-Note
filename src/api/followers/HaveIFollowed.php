@@ -1,5 +1,7 @@
 <?php 
 
+	include '../../inc/db.php';
+
 	if (isset($_POST["followed_id"]) || isset($_POST["uid"])) {
 		$followed_id = $_POST["followed_id"];
 		$follower_id = $_SESSION["uid"];
