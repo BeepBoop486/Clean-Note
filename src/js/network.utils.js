@@ -73,16 +73,6 @@ function DeleteALike(post_id) {
 
 }
 
-function CheckIfIReCleaned/*xd*/(post_id, user_id) {
-    var cleaned = false;
-
-    return cleaned;
-}
-
-function ReClean(post_id, user_id) {
-
-}
-
 function Comment(post_id) {
     var post_id = post_id
 
@@ -94,4 +84,22 @@ function Comment(post_id) {
             input_elm.value = "";
         })
     }
+}
+
+function HaveIFollowed(followed_id) {
+    var followed_id = followed_id
+
+    $.post("/api/followers/HaveIFollowed.php", {followed_id: followed_id}).done((data) => {
+        alert(data)
+    })
+}
+
+function CheckIfIReCleaned/*xd*/(post_id, user_id) {
+    var cleaned = false;
+
+    return cleaned;
+}
+
+function ReClean(post_id, user_id) {
+
 }

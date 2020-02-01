@@ -9,10 +9,10 @@
     include "../inc/includables/header.php";
     include "../inc/includables/pages/network/header.php";
 
-    $stmt1 = $conn->prepare("SELECT name,bio FROM users WHERE name=?");
+    $stmt1 = $conn->prepare("SELECT id,name,bio FROM users WHERE name=?");
     $stmt1->bind_param("s", $toshowu);
     $stmt1->execute();
-    $stmt1->bind_result($uname, $bio);
+    $stmt1->bind_result($uid, $uname, $bio);
     $stmt1->fetch();
     $stmt1->close();
 
@@ -29,6 +29,9 @@
     <p class="user-text">
         <?php echo $bio; ?>
     </p>
+    <?php if($uname != $_SESSION["name"] && isset($_SESSION["uid"])) : ?>
+        <button class="btn btn-primary" id="follow_btn_<?php echo $uid; ?>" onclick="HaveIFollowed(<?php echo $uid; ?>)">Follow</button>
+    <?php endif ?>
 </div>
 
 <div class="container" style="margin-top: 2px;">
