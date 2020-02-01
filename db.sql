@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-02-2020 a las 01:35:54
+-- Tiempo de generación: 02-02-2020 a las 01:41:38
 -- Versión del servidor: 10.3.21-MariaDB-log
 -- Versión de PHP: 7.2.27
 
@@ -34,6 +34,18 @@ CREATE TABLE `comments` (
   `comment_maker` varchar(255) NOT NULL,
   `comment_date` varchar(255) NOT NULL,
   `post_id` int(255) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `follows`
+--
+
+CREATE TABLE `follows` (
+  `id` int(11) NOT NULL,
+  `follower_id` int(255) NOT NULL,
+  `followed_id` int(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -93,6 +105,12 @@ ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `follows`
+--
+ALTER TABLE `follows`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `likes`
 --
 ALTER TABLE `likes`
@@ -118,6 +136,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `comments`
 --
 ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `follows`
+--
+ALTER TABLE `follows`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
