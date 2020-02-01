@@ -42,7 +42,7 @@
                                     <div class="pull-left meta">
                                         <div class="title h5">
                                                     <a href="/p/'.$post_uploader.'" class="post-user-name">'.$post_uploader.'</a>
-                                                    Posted:
+                                                    '.$lang["Posted"].'
                                             </div>
                                         <h6 class="text-muted time">'.$post_date.'</h6>
                                     </div>
@@ -59,8 +59,8 @@
 
                                 <div class="post-footer">
                                     <div class="form-group mx-sm-3 mb-2">
-                                        <input class="form-control add-comment-input" id="comment_box_'.$post_id.'" placeholder="Add a comment">
-                                        <button class="btn btn-primary mb-2" onclick="Comment('.$post_id.')">Comment</button>
+                                        <input class="form-control add-comment-input" id="comment_box_'.$post_id.'" placeholder="'.$lang["Add a comment"].'">
+                                        <button class="btn btn-primary mb-2" onclick="Comment('.$post_id.')">'.$lang["Comment"].'</button>
                                     </div>
                                     <ul class="comments-list">
                                         ';

@@ -2,6 +2,8 @@
 
 	$lang["What's in your mind today?"] = "What's in your mind today?";
 	$lang["Posted:"] = "Posted:";
+	$lang["Comment"] = "Comment";
+	$lang["Add a comment"] = "Add a comment";
 	$lang["Click here for full view"] = "Click here for full view";
 	$lang["There's been an error trying to fetch the posts"] = "There's been an error trying to fetch the posts";
 	$lang["Home"] = "Home";
