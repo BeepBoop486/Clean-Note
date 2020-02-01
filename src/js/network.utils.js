@@ -91,7 +91,7 @@ function Comment(post_id) {
 
     if(content != null) {
         $.post("/api/comments/Comment.php", {post_id: post_id, comment_cnt: content}).done((data) => {
-            alert(data)
+            input_elm.value = "";
         })
     }
 }
