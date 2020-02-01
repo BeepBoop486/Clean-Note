@@ -90,6 +90,16 @@ function HaveIFollowed(followed_id) {
     var followed_id = followed_id
 
     $.post("/api/followers/HaveIFollowed.php", {followed_id: followed_id}).done((data) => {
+        if (data == 0) {
+            Follow(followed_id)
+        }
+    })
+}
+
+function Follow(followed_id) {
+    var followed_id = followed_id
+
+    $.post("/api/followers/Follow.php", {followed_id: followed_id}).done((data) => {
         alert(data)
     })
 }
