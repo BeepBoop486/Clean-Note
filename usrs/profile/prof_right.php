@@ -48,32 +48,32 @@
 
     <div class="panel animated fadeInUp">
         <div class="panel-body bio-graph-info">
-            <h1>Bio Graph</h1>
+            <h1><?php echo $lang["Bio"]; ?></h1>
             <div class="row">
 
                 <div class="bio-row">
-                    <p><span>First Name</span> : <?php echo $fname; ?></p>
+                    <p><span><?php echo $lang["First name"]; ?></span> : <?php echo $fname; ?></p>
                 </div>
                 <div class="bio-row">
-                    <p><span>Last Name</span> : <?php echo $lname; ?></p>
+                    <p><span><?php echo $lang["Last name"]; ?></span> : <?php echo $lname; ?></p>
                 </div>
                 <div class="bio-row">
-                    <p><span>Country</span> : <?php echo $country; ?></p>
+                    <p><span><?php echo $lang["Country"]; ?></span> : <?php echo $country; ?></p>
                 </div>
                 <div class="bio-row">
-                    <p><span>Birthday</span> : <?php echo $bday; ?></p>
+                    <p><span><?php echo $lang["Birthday"]; ?></span> : <?php echo $bday; ?></p>
                 </div>
                 <div class="bio-row">
-                    <p><span>Occupation</span> : <?php echo $occupation; ?></p>
+                    <p><span><?php echo $lang["Occupation"]; ?></span> : <?php echo $occupation; ?></p>
                 </div>
                 <div class="bio-row">
-                    <p><span>Phone</span> : <?php echo $phonen; ?></p>
+                    <p><span><?php echo $lang["Phonen"]; ?></span> : <?php echo $phonen; ?></p>
                 </div>
                 <div class="bio-row">
-                    <p><span>Reg. Date</span> : <?php echo $regdate; ?></p>
+                    <p><span><?php echo $lang["Registration Date"]; ?></span> : <?php echo $regdate; ?></p>
                 </div>
                 <div class="bio-row">
-                    <p><span>Email</span> : <?php echo $mail; ?></p>
+                    <p><span><?php echo $lang["Mail"]; ?></span> : <?php echo $mail; ?></p>
                 </div>
 
             </div>

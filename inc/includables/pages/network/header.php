@@ -11,7 +11,7 @@
          		</button>
 
 			<a class="navbar-brand" href="/">
-				<b>Clean-Note</b>
+				<b><?php echo $globals["SITE_NAME"]; ?></b>
 			</a>
 
 		</div>
@@ -24,7 +24,7 @@
 					<a href="/p/<?php echo $_SESSION['name'];?>"><?php echo $_SESSION["name"]; ?></a>
 				</li>
 				<li>
-					<a href="/">Home</a>
+					<a href="/"><?php echo $lang["Home"]; ?></a>
 				</li>
 				<li>
 					<!-- TODO: Messages -->
@@ -35,7 +35,7 @@
 				<li>
 					<!-- TODO: logout -->
 					<a href="/logout">
-						Logout
+						<?php echo $lang["Logout"]; ?>
 					</a>
 				</li>
 			</ul>

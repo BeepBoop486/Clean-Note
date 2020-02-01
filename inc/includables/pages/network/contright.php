@@ -3,15 +3,14 @@
 	<div class="panel">
 
 		<form action="/" method="post" enctype="multipart/form-data">
-			<textarea class="form-control input-lg p-text-area" placeholder="What's in your mind today?" rows="2" name="topostpostcontent"></textarea>
+			<textarea class="form-control input-lg p-text-area" placeholder="<?php echo $lang['What\'s in your mind today?']; ?>" rows="2" name="topostpostcontent"></textarea>
 			<div class="panel-footer">
 				<input type="submit" name="psubmit" class="btn btn-info pull-right" value="Post">
 
 				<ul class="nav nav-pills">
 					<!-- TODO: All of this -->
 					<li>
-				              <a href="#"><i class="fa fa-map-marker"></i></a>
-				        </li>
+				        <a href="#"><i class="fa fa-map-marker"></i></a>
 					<li>
 						<a href="#"><i class="fa fa-camera"></i></a>
 					</li>
@@ -51,7 +50,7 @@
 						<div class="pull-left meta">
 							<div class="title h5">
 				              			<a href="/p/'.$post_uploader.'" class="post-user-name">'.$post_uploader.'</a>
-				              			Posted:
+				              			'.$lang["Posted:"].'
 				          		</div>
 							<h6 class="text-muted time">'.$post_date.'</h6>
 						</div>
@@ -59,7 +58,7 @@
 
 					<div class="post-description">
 						<p>'.nl2br($post_content).'</p>
-						<a href="/post/'.$post_id.'">Click here for full view</a>
+						<a href="/post/'.$post_id.'">'.$lang['Click here for full view'].'</a>
 						<div class="stats">
 							<a class="stat-item" id="like_button_'.$post_id.'" onclick="CheckIfILiked('.$post_id.', '.$_SESSION["uid"].', 0)"><i class="fa fa-thumbs-up icon"></i> <k id="likes_value_'.$post_id.'"> 0</k></a>
 							<a class="stat-item" id="retweet_button_'.$post_id.'"><i class="fa fa-retweet icon"></i></a>
@@ -80,7 +79,7 @@
 		}
 
 	} else {
-		echo "There's been an error trying to fetch the posts.";
+		echo $lang["There's been an error trying to fetch the posts"];
 	}
 	$stmt1->close();
 

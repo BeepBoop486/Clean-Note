@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="pull-left meta">
                                         <div class="title h5">
-                                            <a class="post-user-name" href="/p/'.$pupl.'">'.$pupl.'</a> Posted:
+                                            <a class="post-user-name" href="/p/'.$pupl.'">'.$pupl.'</a> '.$lang["Posted"].'
                                         </div>
                                         <h6 class="text-muted time">'.$pdate.'</h6>
                                     </div>

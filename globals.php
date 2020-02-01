@@ -12,5 +12,6 @@
     $globals["SITE_DESC"] = "An opensource try to clone Twitter and Facebook";
     $globals["SITE_TAGS"] = "Twitter, facebook, twitter clone, facebook clone, opensource";
     $globals["SITE_AUTH"] = "BeepBoop486";
+    $globals["SITE_LANG"] = "en";
 
 ?>

@@ -10,17 +10,17 @@
 					<div class="form-content">
 
 						<div class="form-group">
-							<input class="form-control input-underline input-lg" type="text" placeholder="Username..." name="pname">
+							<input class="form-control input-underline input-lg" type="text" placeholder="<?php echo $lang["Username..."]; ?>" name="pname">
 						</div>
 
 						<div class="form-group">
-							<input class="form-control input-underline input-lg" type="password" placeholder="Password..." name="ppass">
+							<input class="form-control input-underline input-lg" type="password" placeholder="<?php echo $lang["Password..."]; ?>" name="ppass">
 						</div>
 
 					</div>
 
-					<input type="submit" name="login" value="Log in" class="btn btn-info btn-lg">
-					<input type="submit" name="register" value="Sign up" class="btn btn-info btn-lg">
+					<input type="submit" name="login" value="<?php echo $lang["Log in"]; ?>" class="btn btn-info btn-lg">
+					<input type="submit" name="register" value="<?php echo $lang["Signup"]; ?>" class="btn btn-info btn-lg">
 
 				</form>
 			</div>
