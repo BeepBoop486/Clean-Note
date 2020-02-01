@@ -91,8 +91,20 @@ function HaveIFollowed(followed_id) {
 
     $.post("/api/followers/HaveIFollowed.php", {followed_id: followed_id}).done((data) => {
         if (data == 0) {
+            //TODO: Change follow button text
             Follow(followed_id)
+        } else if (data == 1) {
+            //TODO: Change follow button text
+            UnFollow(followed_id)
         }
+    })
+}
+
+function UnFollow(followed_id) {
+    var followed_id = followed_id
+
+    $.post("/api/followers/UnFollow.php", {followed_id: followed_id}).done((data) => {
+        //TODO: Change follow button text
     })
 }
 
@@ -100,7 +112,7 @@ function Follow(followed_id) {
     var followed_id = followed_id
 
     $.post("/api/followers/Follow.php", {followed_id: followed_id}).done((data) => {
-        alert(data)
+        //TODO: Change follow button text
     })
 }
 
