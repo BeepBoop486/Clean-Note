@@ -12,7 +12,8 @@ Features:
 
 TODO:
 - Like comments and reply to them
-- Search (users)
+- Search (users) - working on it
+- Ppl you may know sidebar
 - Add the stats (post footer) to every page where it's needed
 - To do the "get the following accounts posts" like i did with the liked
 - To change all the forms with Ajax Queries
