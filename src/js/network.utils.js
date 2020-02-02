@@ -86,17 +86,32 @@ function Comment(post_id) {
     }
 }
 
-function HaveIFollowed(followed_id) {
+function HaveIFollowed(followed_id, action) {
     var followed_id = followed_id
+    var action = action
 
     $.post("/api/followers/HaveIFollowed.php", {followed_id: followed_id}).done((data) => {
-        if (data == 0) {
-            //TODO: Change follow button text
-            Follow(followed_id)
-        } else if (data == 1) {
-            //TODO: Change follow button text
-            UnFollow(followed_id)
+
+        if(action == 1) {
+            if (data == 0) {
+                Follow(followed_id)
+            } else if (data == 1) {
+                UnFollow(followed_id)
+            }
+        } 
+        if(action == 0) {
+
+            if(document.readyState === "complete") {
+                var elm = document.getElementById("follow_btn_"+followed_id);
+                if (data == 0) {
+                    elm.innerHTML = "Follow";
+                } else if (data == 1) {
+                    elm.innerHTML = "Unfollow";
+                }
+            }
+
         }
+
     })
 }
 
@@ -104,8 +119,7 @@ function UnFollow(followed_id) {
     var followed_id = followed_id
 
     $.post("/api/followers/UnFollow.php", {followed_id: followed_id}).done((data) => {
-        //TODO: Change follow button text
-        alert(data)
+        HaveIFollowed(followed_id, 0)
     })
 }
 
@@ -113,7 +127,7 @@ function Follow(followed_id) {
     var followed_id = followed_id
 
     $.post("/api/followers/Follow.php", {followed_id: followed_id}).done((data) => {
-        //TODO: Change follow button text
+        HaveIFollowed(followed_id, 0)
     })
 }
 

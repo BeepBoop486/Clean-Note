@@ -30,7 +30,8 @@
         <?php echo $bio; ?>
     </p>
     <?php if($uname != $_SESSION["name"] && isset($_SESSION["uid"])) : ?>
-        <button class="btn btn-primary" id="follow_btn_<?php echo $uid; ?>" onclick="HaveIFollowed(<?php echo $uid; ?>)">Follow</button>
+        <script type="text/javascript">HaveIFollowed(<?php echo $uid; ?>, 0)</script>
+        <button class="btn btn-primary" id="follow_btn_<?php echo $uid; ?>" onclick="HaveIFollowed(<?php echo $uid; ?>, 1)">Follow</button>
     <?php endif ?>
 </div>
 
