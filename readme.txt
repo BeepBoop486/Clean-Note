@@ -17,3 +17,4 @@ TODO:
 - To do the "get the following accounts posts" like i did with the liked
 - To change all the forms with Ajax Queries
 - Add a new SQL table to store the activity of all users and show just from the ones we follow
+- Admin panel
