@@ -34,8 +34,8 @@
 			$ss = "";
 			$si = 0;
 
-			$stmt = $conn->prepare("INSERT INTO users(name, pass, bio, regdate, fname, lname, country, bday, occupation, mail, phonen) VALUES(?,?,?,?,?,?,?,?,?,?,?)");
-			$stmt->bind_param("ssssssssssi", $pname, $finalpass, $defbio, $regdate,$ss,$ss,$ss,$ss,$ss,$ss,$si);
+			$stmt = $conn->prepare("INSERT INTO users(name, pass, bio, regdate, fname, lname, country, bday, occupation, mail, phonen, isadmin) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
+			$stmt->bind_param("ssssssssssii", $pname, $finalpass, $defbio, $regdate,$ss,$ss,$ss,$ss,$ss,$ss,$si,$si);
 			if($stmt->execute()) {
 				echo '<script>window.location.href = "/"</script>';
 			} else {
@@ -60,7 +60,7 @@
 		} else {
 			$canlogin = 0;
 		}
-		$stmt1->bind_result($dbid, $dbname, $dbpass, $bio, $regdate, $fname, $lname, $country, $bday, $occupation, $mail, $phonen);
+		$stmt1->bind_result($dbid, $dbname, $dbpass, $bio, $regdate, $fname, $lname, $country, $bday, $occupation, $mail, $phonen, $isadmin);
 		while($stmt1->fetch()) {
 			$dbpass = $dbpass;
 		}
@@ -70,6 +70,7 @@
 			if(password_verify($ppass, $dbpass)) {
 				$_SESSION["name"] = $pname;
 				$_SESSION["uid"] = $dbid;
+				$_SESSION["admin"] = $isadmin;
 				echo '<script>window.location.href = "/"</script>';
 			} else {
 				echo "Your password is wrong";

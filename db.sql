@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-02-2020 a las 01:41:38
+-- Tiempo de generación: 02-02-2020 a las 02:31:53
 -- Versión del servidor: 10.3.21-MariaDB-log
 -- Versión de PHP: 7.2.27
 
@@ -91,7 +91,8 @@ CREATE TABLE `users` (
   `bday` varchar(20) NOT NULL,
   `occupation` varchar(255) NOT NULL,
   `mail` varchar(255) NOT NULL,
-  `phonen` int(20) NOT NULL
+  `phonen` int(20) NOT NULL,
+  `isadmin` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
