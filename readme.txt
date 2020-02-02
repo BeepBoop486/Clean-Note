@@ -8,6 +8,7 @@ Features:
 - Switch between Spanish and English
 - Follow and Unfollow
 - Modify your profile
+- The whole source code is less than 1 MB
 
 TODO:
 - In the home will be shown only the posts from the users we follow
