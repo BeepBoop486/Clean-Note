@@ -9,12 +9,12 @@ Features:
 - Follow and Unfollow
 - Modify your profile
 - The whole source code is less than 2 MB
+- A 3rd party able by using our api
 
 TODO:
 - Like comments and reply to them
 - Ppl you may know sidebar
 - Add the stats (post footer) to every page where it's needed
-- To do the "get the following accounts posts" like i did with the liked
 - To change all the forms with Ajax Queries
 - Add a new SQL table to store the activity of all users and show just from the ones we follow
 - Admin panel - Still working on it

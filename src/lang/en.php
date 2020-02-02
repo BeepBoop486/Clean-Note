@@ -34,5 +34,7 @@
 	$lang["Search..."] = "Search...";
 	$lang["Showing results for: "] = "Showing results for: ";
 	$lang["Total users: "] = "Total users: ";
+	$lang["Followers"] = "Followers";
+	$lang["Following"] = "Following";
 
 ?>

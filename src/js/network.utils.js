@@ -114,18 +114,38 @@ function HaveIFollowed(followed_id, action) {
         } 
         if(action == 0) {
 
-            if(document.readyState === "complete") {
-                var elm = document.getElementById("follow_btn_"+followed_id);
-                if (data == 0) {
-                    elm.innerHTML = "Follow";
-                } else if (data == 1) {
-                    elm.innerHTML = "Unfollow";
+            let stateCheck = setInterval(() => {
+                if(document.readyState === "complete") {
+                    var elm = document.getElementById("follow_btn_"+followed_id);
+                    if (data == 0) {
+                        elm.innerHTML = "Follow";
+                    } else if (data == 1) {
+                        elm.innerHTML = "Unfollow";
+                    }
+                    clearInterval(stateCheck);
+
                 }
-            }
+            })
 
         }
 
     })
+}
+
+function followers_num(followed_id) {
+    var followed_id = followed_id
+
+    let stateCheck = setInterval(() => {
+        if(document.readyState === 'complete') {
+            var elm = document.getElementById("followers_amount_"+followed_id)
+            $.get("/api/followers/GetSomeoneFollowers.php", {id: followed_id}).done((data) => {
+                elm.innerHTML = " " + data
+            })
+            clearInterval(stateCheck);
+
+        }
+    })
+
 }
 
 function UnFollow(followed_id) {

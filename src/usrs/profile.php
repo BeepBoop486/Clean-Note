@@ -31,7 +31,8 @@
     </p>
     <?php if($uname != $_SESSION["name"] && isset($_SESSION["uid"])) : ?>
         <script type="text/javascript">HaveIFollowed(<?php echo $uid; ?>, 0)</script>
-        <button class="btn btn-primary" id="follow_btn_<?php echo $uid; ?>" onclick="HaveIFollowed(<?php echo $uid; ?>, 1)">Follow</button>
+        <button class="btn btn-primary" id="follow_btn_<?php echo $uid; ?>" onclick="HaveIFollowed(<?php echo $uid; ?>, 1)">Follow</button><k id="followers_amount_<?php echo $uid;?>">0</k>
+        <script> followers_num(<?php echo $uid; ?>)</script>
     <?php endif ?>
 </div>
 

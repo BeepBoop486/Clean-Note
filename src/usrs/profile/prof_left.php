@@ -16,6 +16,12 @@
                 <li>
                     <a href="/l/<?php echo $uname; ?>"><i class="fa fa-heart"></i> <?php echo $lang["Liked"]; ?></a>
                 </li>
+                <li>
+                    <a href="/followers/<?php echo $uname; ?>"><i class="fa fa-user"></i> <?php echo $lang["Followers"]; ?></a>
+                </li>
+                <li>
+                    <a href="/following/<?php echo $uname; ?>"><i class="fa fa-user"></i> <?php echo $lang["Following"]; ?></a>
+                </li>
                 <?php if(isset($_SESSION["name"]) && $_SESSION["name"] == $uname) : ?>
                 <li>
                     <a href="/editAccount"><i class="fa fa-edit"></i> <?php echo $lang["Edit profile"]; ?></a>
