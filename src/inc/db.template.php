@@ -1,5 +1,7 @@
 <?php
 
+	error_reporting(0);
+
 	include $_SERVER["DOCUMENT_ROOT"] . "/globals.php";
 	include $_SERVER["DOCUMENT_ROOT"] . "/lang/" . $globals["SITE_LANG"] . ".php";
 
