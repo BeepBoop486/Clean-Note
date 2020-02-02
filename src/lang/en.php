@@ -31,5 +31,7 @@
 	$lang["Liked"] = "Liked";
 	$lang["Edit profile"] = "Edit profile";
 	$lang["Admin Panel"] = "Admin Panel";
+	$lang["Search..."] = "Search...";
+	$lang["Showing results for: "] = "Showing results for: ";
 
 ?>

@@ -17,7 +17,20 @@
 		</div>
 
 		<div id="navbar" class="collapse navbar-collapse">
-			<!-- TODO: Search box -->
+			
+			<div class="col-md-5 col-sm-5">
+				<form class="navbar-form" method="GET" action="/s">
+					<div class="form-group" style="display: inline;">
+						<div class="input-group" style="display: table;">
+							<input class="form-control" name="query" placeholder="<?php echo $lang["Search..."]; ?>" autocomplete="off" type="text">
+							<span class="input-group-addon" style="width: 1%;">
+								<span class="glyphicon glyphicon-search"></span>
+							</span>
+						</div>
+					</div>
+				</form>
+			</div>
+
 			<ul class="nav navbar-nav navbar-right">
 				<li>
 					<!-- TODO: Go to the profile AND PP Preview -->

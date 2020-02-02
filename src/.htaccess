@@ -9,5 +9,6 @@
     RewriteRule     ^l/(.*)$ usrs/liked.php?user=$1       [NC,L]
     RewriteRule     ^post/(.*)$ utils/post.php?post_id=$1 [NC,L]
     RewriteRule		^admin usrs/admin/			  		  [NC,L]
+    RewriteRule     ^s utils/search.php                    [NC,L]
 
 </IfModule>

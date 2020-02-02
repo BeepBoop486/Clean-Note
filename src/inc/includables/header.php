@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="/css/animate.min.css">
 	<link rel="stylesheet" href="/css/font-awesome.min.css">
 	<link rel="stylesheet" href="/css/timeline.css">
+	<link rel="stylesheet" href="/css/grid.css">
 
 	<script src="/js/jquery.js"></script>
 	<script src="/js/custom.js"></script>

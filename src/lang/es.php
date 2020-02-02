@@ -31,5 +31,7 @@
 	$lang["Liked"] = "Me gusta";
 	$lang["Edit profile"] = "Editar perfil";
 	$lang["Admin Panel"] = "Administración de " . $globals["SITE_NAME"];
+	$lang["Search..."] = "Buscar...";
+	$lang["Showing results for: "] = "Mostrando resultados de búsqueda para: ";
 
 ?>
