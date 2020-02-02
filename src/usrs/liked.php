@@ -42,15 +42,8 @@
             <div class="profile-info col-md-8 animated fadeInRight">
                 <?php
 
-                    $stmt3 = $conn->prepare("SELECT id FROM users WHERE name=?");
-                    $stmt3->bind_param("s", $toshowu);
-                    $stmt3->execute();
-                    $stmt3->bind_result($toshowid);
-                    $stmt3->fetch();
-                    $stmt3->close();
-
                     $stmt = $conn->prepare("SELECT post_id FROM likes WHERE liker_id =? ORDER BY post_id DESC");
-                    $stmt->bind_param("s", $toshowid);
+                    $stmt->bind_param("s", $_SESSION["uid"]);
                     $stmt->execute();
                     $stmt->bind_result($post_id);
                     while($stmt->fetch()) {
