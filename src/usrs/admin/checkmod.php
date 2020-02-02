@@ -1,6 +1,6 @@
 <?php 
 
-	include $_SERVER["DOCUMENT_ROOT"] . '/inc/db.php';
+	include "../../inc/db.php";
 
 	if (isset($_SESSION["uid"])) {
 		$stmt = $conn->prepare("SELECT isadmin FROM users WHERE name=?");

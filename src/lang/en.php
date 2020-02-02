@@ -30,5 +30,6 @@
 	$lang["About"] = "About";
 	$lang["Liked"] = "Liked";
 	$lang["Edit profile"] = "Edit profile";
+	$lang["Admin Panel"] = "Admin Panel";
 
 ?>

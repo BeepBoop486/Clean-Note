@@ -8,7 +8,7 @@ Features:
 - Switch between Spanish and English
 - Follow and Unfollow
 - Modify your profile
-- The whole source code is less than 1 MB
+- The whole source code is less than 2 MB
 
 TODO:
 - Like comments and reply to them

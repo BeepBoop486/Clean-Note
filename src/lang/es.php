@@ -30,5 +30,6 @@
 	$lang["About"] = "Acerca de";
 	$lang["Liked"] = "Me gusta";
 	$lang["Edit profile"] = "Editar perfil";
+	$lang["Admin Panel"] = "Administración de " . $globals["SITE_NAME"];
 
 ?>
