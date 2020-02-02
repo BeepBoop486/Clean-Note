@@ -70,7 +70,11 @@
 			if(password_verify($ppass, $dbpass)) {
 				$_SESSION["name"] = $pname;
 				$_SESSION["uid"] = $dbid;
-				$_SESSION["admin"] = $isadmin;
+
+				if ($isadmin == 1) {
+					$_SESSION["admin"] = $isadmin;
+				}
+
 				echo '<script>window.location.href = "/"</script>';
 			} else {
 				echo "Your password is wrong";

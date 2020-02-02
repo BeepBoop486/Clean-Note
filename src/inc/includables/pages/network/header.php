@@ -33,6 +33,13 @@
 					</a>
 				</li>
 				<li>
+					<?php if(isset($_SESSION["admin"])) : ?>
+						<a href="/admin">
+							Admin panel
+						</a>
+					<?php endif; ?>
+				</li>
+				<li>
 					<!-- TODO: logout -->
 					<a href="/logout">
 						<?php echo $lang["Logout"]; ?>
