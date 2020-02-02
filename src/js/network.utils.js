@@ -31,6 +31,18 @@ function CheckIfILiked(post_id, user_id, action) {
                 AddALike(post_id)
             }
         })
+        $.get("/api/comments/GetComments.php", {post_id: post_id}).done((data) => {
+            SetCommentsVal(post_id, data);
+        })
+    }
+}
+
+function SetCommentsVal(pid, val) {
+    var post_id = pid, val = val
+
+    if(document.readyState === "complete") {
+        var dom = document.getElementById("comments_val_"+post_id)
+        dom.innerHTML = val
     }
 }
 
@@ -82,6 +94,7 @@ function Comment(post_id) {
     if(content != null) {
         $.post("/api/comments/Comment.php", {post_id: post_id, comment_cnt: content}).done((data) => {
             input_elm.value = "";
+            CheckIfILiked(post_id, 1)
         })
     }
 }
