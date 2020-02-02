@@ -105,6 +105,7 @@ function UnFollow(followed_id) {
 
     $.post("/api/followers/UnFollow.php", {followed_id: followed_id}).done((data) => {
         //TODO: Change follow button text
+        alert(data)
     })
 }
 
