@@ -33,5 +33,6 @@
 	$lang["Admin Panel"] = "Admin Panel";
 	$lang["Search..."] = "Search...";
 	$lang["Showing results for: "] = "Showing results for: ";
+	$lang["Total users: "] = "Total users: ";
 
 ?>
