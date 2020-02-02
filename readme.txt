@@ -11,7 +11,6 @@ Features:
 - The whole source code is less than 1 MB
 
 TODO:
-- In the home will be shown only the posts from the users we follow - working on this
 - Like comments and reply to them
 - Add the stats (post footer) to every page where it's needed
 - To do the "get the following accounts posts" like i did with the liked
