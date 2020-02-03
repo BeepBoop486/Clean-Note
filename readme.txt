@@ -13,7 +13,6 @@ Features:
 
 TODO:
 - Like comments and reply to them
-- Ppl you may know sidebar
 - Add the stats (post footer) to every page where it's needed
 - To change all the forms with Ajax Queries
 - Add a new SQL table to store the activity of all users and show just from the ones we follow

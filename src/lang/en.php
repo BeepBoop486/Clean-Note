@@ -37,5 +37,7 @@
 	$lang["Followers"] = "Followers";
 	$lang["Following"] = "Following";
 	$lang["Total posts: "] = "Total posts: ";
+	$lang["Ppl you may know"] = "People you may know";
+	$lang["There's no featured users yet"] = "There's no featured users yet";
 
 ?>
