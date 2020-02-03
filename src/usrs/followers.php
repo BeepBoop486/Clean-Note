@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="/css/grid.css">
 
 <div class="row text-center color-container">
-    <h1 class="profile-name"><?php echo $lang["Followers of "] . $toshowu; ?></h1>
+    <h1 class="profile-name"><?php echo $lang["Followers of "] . '<a href="/p/' . $toshowu . '">'.$toshowu.'</a>'; ?></h1>
 </div>
 
 <div class="container">
