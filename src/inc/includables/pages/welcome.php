@@ -10,11 +10,11 @@
 					<div class="form-content">
 
 						<div class="form-group">
-							<input class="form-control input-underline input-lg" type="text" placeholder="<?php echo $lang["Username..."]; ?>" name="pname">
+							<input class="form-control input-underline input-lg" type="text" placeholder="<?php echo $lang["Username..."]; ?>" name="pname" required>
 						</div>
 
 						<div class="form-group">
-							<input class="form-control input-underline input-lg" type="password" placeholder="<?php echo $lang["Password..."]; ?>" name="ppass">
+							<input class="form-control input-underline input-lg" type="password" placeholder="<?php echo $lang["Password..."]; ?>" name="ppass" required>
 						</div>
 
 					</div>
