@@ -17,7 +17,6 @@ TODO:
 - Add the stats (post footer) to every page where it's needed
 - To change all the forms with Ajax Queries
 - Add a new SQL table to store the activity of all users and show just from the ones we follow
-- Admin panel - Still working on it
 - Add plugins (i've got an idea of something like CleanNote for schools and teachers)
 - Email signup checking
 - A different form for signing up

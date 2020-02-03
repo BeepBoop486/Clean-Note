@@ -36,5 +36,6 @@
 	$lang["Total users: "] = "Total users: ";
 	$lang["Followers"] = "Followers";
 	$lang["Following"] = "Following";
+	$lang["Total posts: "] = "Total posts: ";
 
 ?>
