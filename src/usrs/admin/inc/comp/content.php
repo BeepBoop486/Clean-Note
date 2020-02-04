@@ -37,14 +37,83 @@
 									<div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><?php echo $lang["Total users: "]; ?></div>
 									<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_users; ?></div>
 								</div>
-								<div class="col-auto">
-									<i class="fa fa-users"></i>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End card-->
+
+				<!-- Card -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card border-left-success shadow h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters align-items-center">
+
+								<div class="col-mr-2">
+									<?php
+										$stmt = $conn->prepare("SELECT * FROM posts");
+										$stmt->execute();
+										$stmt->store_result();
+										$total_posts = $stmt->num_rows;
+										$stmt->close();
+									?>
+									<div class="text-xs font-weight-bold text-success text-uppercase mb-1"><?php echo $lang["Total posts"]; ?></div>
+									<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_posts; ?></div>
 								</div>
 
 							</div>
 						</div>
 					</div>
-				</dov>
+				</div>
+				<!-- End card-->
+
+				<!-- Card -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card border-left-info shadow h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters align-items-center">
+
+								<div class="col-mr-2">
+									<?php
+										$stmt = $conn->prepare("SELECT * FROM follows");
+										$stmt->execute();
+										$stmt->store_result();
+										$total_follows = $stmt->num_rows;
+										$stmt->close();
+									?>
+									<div class="text-xs font-weight-bold text-info text-uppercase mb-1"><?php echo $lang["Total follows"]; ?></div>
+									<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_follows; ?></div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End card-->
+
+				<!-- Card -->
+				<div class="col-xl-3 col-md-6 mb-4">
+					<div class="card border-left-warning shadow h-100 py-2">
+						<div class="card-body">
+							<div class="row no-gutters align-items-center">
+
+								<div class="col-mr-2">
+									<?php
+										$stmt = $conn->prepare("SELECT * FROM likes");
+										$stmt->execute();
+										$stmt->store_result();
+										$total_likes = $stmt->num_rows;
+										$stmt->close();
+									?>
+									<div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><?php echo $lang["Total likes"]; ?></div>
+									<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total_likes; ?></div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
 				<!-- End card-->
 
 			</div>

@@ -20,3 +20,4 @@ TODO:
 - Email signup checking
 - A different form for signing up
 - To delete and edit posts
+- Admin panel - working on it

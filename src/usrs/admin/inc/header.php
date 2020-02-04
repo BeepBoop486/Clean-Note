@@ -15,6 +15,7 @@
 	<meta name="author" content="<?php echo $globals['SITE_AUTH']; ?>">
 
 	<link rel="stylesheet" type="text/css" href="/usrs/admin/css/sb-admin.css">
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
 </head>
 <body>
 
