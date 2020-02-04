@@ -21,3 +21,5 @@ TODO:
 - A different form for signing up
 - To delete and edit posts
 - Admin panel - working on it
+- In a post you can tag someone by using its name with a "@", it could be made by taking a string
+from where the "@" is written, to a space

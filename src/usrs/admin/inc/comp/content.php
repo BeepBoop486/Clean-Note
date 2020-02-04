@@ -10,6 +10,7 @@
 		</nav>
 		<!-- End of navbar -->
 
+		<!-- Container fluid -->
 		<div class="container-fluid">
 
 			<!-- Page heading -->
@@ -119,6 +120,9 @@
 			</div>
 			<!-- End content row -->
 
+			<?php include "notes.php"; ?>
+
+		<!-- End container fluid -->
 		</div>
 
 	</div>
