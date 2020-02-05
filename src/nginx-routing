@@ -42,6 +42,7 @@ server {
 
 	# Routing
 	rewrite ^/logout /usrs/logout.php last;
+        rewrite ^/register /usrs/register.php last;
         rewrite ^/p/(.*)$ /usrs/profile.php?user=$1 last;
         rewrite ^/a/(.*)$ /usrs/about.php?user=$1 last;
         rewrite ^/editAccount /usrs/profile/edit.php last;

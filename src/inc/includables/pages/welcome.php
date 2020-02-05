@@ -20,7 +20,7 @@
 					</div>
 
 					<input type="submit" name="login" value="<?php echo $lang["Log in"]; ?>" class="btn btn-info btn-lg">
-					<input type="submit" name="register" value="<?php echo $lang["Signup"]; ?>" class="btn btn-info btn-lg">
+					<a href="/register" class="btn btn-info btn-lg"><?php echo $lang["Signup"]; ?></a>
 
 				</form>
 			</div>

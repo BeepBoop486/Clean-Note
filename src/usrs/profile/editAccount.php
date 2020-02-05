@@ -77,7 +77,7 @@
                 <div class="form-group">
                     <label class="col-md-4 control-label"><?php echo $lang["Mail"]; ?></label>
                     <div class="col-md-7">
-                        <input type="text" class="form-control" value="<?php echo $mail; ?>" name="mail">
+                        <input type="text" class="form-control" value="<?php echo $mail; ?>" name="mail" disabled>
                     </div>
                 </div>
 
