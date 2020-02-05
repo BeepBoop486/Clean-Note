@@ -47,5 +47,7 @@
 	$lang["Dashboard"] = "Dashboard";
 	$lang["About"] = "About";
 	$lang["About cnt"] = "Clean-Note is a brand-new social network aiming to be a project that not only could be using to chat and to find new friends but helping schools, work entities (such as enterprises, workers, officers etc).\nClean note is a fully OpenSource project, so... If you're reading to this, it means that you are a mod of cleannote.rf.gd (its official domain) or you're a person who downloaded the source code, whatever it is, thanks for supporting me ^^";
+	$lang["Development"] = "Development";
+	$lang["Development cnt"] = "Clean-Note is developed through a (git) repository you can find at https://github.com/BeepBoop486/Clean-Note and look for my other projects. All of them are fully opensource.";
 
 ?>
